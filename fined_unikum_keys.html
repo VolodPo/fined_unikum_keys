@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//Знайти однакові імена властивостей і вивести всі що не повторяються
+	var obj=[
+	{
+		a:1,
+		b:1,
+		d:1
+	},
+	{
+		e:1,
+		c:1,
+		a:1
+	},
+	{
+		a:1,
+		b:1,
+		e:1
+	},
+	]
+
+	var objLast=[];
+
+	obj.forEach(function(item){
+		var objKey=Object.keys(item);
+		objKey.forEach(function(num){
+			if(!objLast.find(function(rem){return rem==num})){
+				objLast.push(num)
+			}
+		})
+	})
+	console.log(objLast)
+	
+</script>
+</body>
+</html>
